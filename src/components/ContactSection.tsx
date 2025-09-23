@@ -16,29 +16,29 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefono',
-      value: '+39 123 456 7890',
+      title: t('phone'),
+      value: t('contactPhone'),
       description: 'Lun-Ven 8:00-18:00, Sab 8:00-13:00',
       link: 'tel:+39123456789',
     },
     {
       icon: MessageCircle,
-      title: 'WhatsApp',
-      value: '+39 123 456 7890',
-      description: 'Risposta rapida 24/7',
+      title: t('whatsapp'),
+      value: t('contactPhone'),
+      description: t('contactWhatsapp'),
       link: 'https://wa.me/39123456789',
     },
     {
       icon: Mail,
-      title: 'Email',
-      value: 'info@edilmiccolis.it',
+      title: t('email'),
+      value: t('contactEmail'),
       description: 'Risposta entro 2 ore',
       link: 'mailto:info@edilmiccolis.it',
     },
     {
       icon: MapPin,
-      title: 'Sede',
-      value: 'Via Roma 123, Milano',
+      title: t('address'),
+      value: t('contactAddress'),
       description: 'Servizio in tutta la Lombardia',
       link: 'https://maps.google.com',
     },
@@ -52,7 +52,7 @@ const ContactSection = () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     toast({
-      title: "Richiesta inviata!",
+      title: t('formSuccess'),
       description: "Ti ricontatteremo entro 24 ore per discutere il tuo progetto.",
     });
     
@@ -77,9 +77,9 @@ const ContactSection = () => {
           <div className="lg:col-span-1">
             <div className="space-y-6">
               <div className="bg-hero-gradient rounded-2xl p-8 text-white mb-8">
-                <h3 className="text-2xl font-bold mb-4">Preventivo Gratuito</h3>
+                <h3 className="text-2xl font-bold mb-4">{t('contactQuoteTitle')}</h3>
                 <p className="text-white/90 mb-4">
-                  Ricevi un preventivo dettagliato e personalizzato in 24 ore, senza impegno.
+                  {t('contactQuoteDescription')}
                 </p>
                 <div className="flex items-center gap-2 text-white/80">
                   <Clock className="h-4 w-4" />
@@ -118,7 +118,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading">Richiedi un Preventivo</CardTitle>
+                <CardTitle className="text-2xl font-heading">{t('contactButton')}</CardTitle>
                 <CardDescription>
                   Compila il form con i dettagli del tuo progetto e ti ricontatteremo al più presto.
                 </CardDescription>
@@ -127,74 +127,74 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nome e Cognome *</Label>
+                      <Label htmlFor="name">{t('formName')} *</Label>
                       <Input 
                         id="name" 
                         required 
-                        placeholder="Il tuo nome completo"
+                        placeholder={t('formNamePlaceholder')}
                         className="transition-all duration-300 focus:shadow-elegant"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefono *</Label>
+                      <Label htmlFor="phone">{t('formPhone')} *</Label>
                       <Input 
                         id="phone" 
                         type="tel" 
                         required 
-                        placeholder="+39 123 456 7890"
+                        placeholder={t('formPhonePlaceholder')}
                         className="transition-all duration-300 focus:shadow-elegant"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">{t('formEmail')} *</Label>
                     <Input 
                       id="email" 
                       type="email" 
                       required 
-                      placeholder="tua@email.com"
+                      placeholder={t('formEmailPlaceholder')}
                       className="transition-all duration-300 focus:shadow-elegant"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="service">Tipo di Servizio</Label>
+                      <Label htmlFor="service">{t('formService')}</Label>
                       <select 
                         id="service" 
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
                         <option value="">Seleziona un servizio</option>
-                        <option value="painting">Pitturazioni</option>
-                        <option value="wallpaper">Carta da parati</option>
-                        <option value="drywall">Cartongesso</option>
-                        <option value="renovation">Ristrutturazione completa</option>
+                        <option value="painting">{t('formServicePainting')}</option>
+                        <option value="wallpaper">{t('formServiceWallpaper')}</option>
+                        <option value="drywall">{t('formServiceDrywall')}</option>
+                        <option value="renovation">{t('formServiceRenovation')}</option>
                         <option value="other">Altro</option>
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="budget">Budget Orientativo</Label>
+                      <Label htmlFor="budget">{t('formBudget')}</Label>
                       <select 
                         id="budget" 
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
                         <option value="">Seleziona budget</option>
-                        <option value="under-5k">Fino a €5.000</option>
-                        <option value="5k-15k">€5.000 - €15.000</option>
-                        <option value="15k-30k">€15.000 - €30.000</option>
-                        <option value="over-30k">Oltre €30.000</option>
+                        <option value="under-5k">{t('formBudget1')}</option>
+                        <option value="5k-15k">{t('formBudget2')}</option>
+                        <option value="15k-30k">{t('formBudget3')}</option>
+                        <option value="over-30k">{t('formBudget4')}</option>
                         <option value="discuss">Da discutere</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Descrizione del Progetto *</Label>
+                    <Label htmlFor="message">{t('formDescription')} *</Label>
                     <Textarea 
                       id="message" 
                       required 
-                      placeholder="Descrivi il tuo progetto, le tue esigenze e tempistiche..."
+                      placeholder={t('formDescriptionPlaceholder')}
                       rows={4}
                       className="transition-all duration-300 focus:shadow-elegant"
                     />
@@ -215,11 +215,11 @@ const ContactSection = () => {
                     className="w-full md:w-auto"
                   >
                     {isSubmitting ? (
-                      'Invio in corso...'
+                      t('formSubmitting')
                     ) : (
                       <>
                         <Send className="mr-2 h-5 w-5" />
-                        Invia Richiesta Preventivo
+                        {t('formSubmit')}
                       </>
                     )}
                   </Button>

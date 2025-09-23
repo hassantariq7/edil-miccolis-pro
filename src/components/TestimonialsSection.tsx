@@ -10,32 +10,32 @@ const TestimonialsSection = () => {
     {
       id: 1,
       name: 'Maria Rossi',
-      role: 'Proprietaria di Casa',
+      role: t('testimonial1Role'),
       content: t('testimonial1'),
       rating: 5,
       image: '/api/placeholder/80/80',
-      project: 'Ristrutturazione Cucina',
-      location: 'Milano',
+      project: t('testimonial1Project'),
+      location: t('testimonial1Location'),
     },
     {
       id: 2,
       name: 'Luca Derosa',
-      role: 'Imprenditore',
+      role: t('testimonial2Role'),
       content: t('testimonial2'),
       rating: 5,
       image: '/api/placeholder/80/80',
-      project: 'Pittura Ufficio',
-      location: 'Roma',
+      project: t('testimonial2Project'),
+      location: t('testimonial2Location'),
     },
     {
       id: 3,
       name: 'Anna Bianchi',
-      role: 'Architetto',
+      role: t('testimonial3Role'),
       content: t('testimonial3'),
       rating: 5,
       image: '/api/placeholder/80/80',
-      project: 'Ristrutturazione Bagno',
-      location: 'Torino',
+      project: t('testimonial3Project'),
+      location: t('testimonial3Location'),
     },
   ];
 
@@ -48,8 +48,7 @@ const TestimonialsSection = () => {
             {t('testimonialsTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Le parole dei nostri clienti sono la nostra migliore referenza. 
-            Ecco cosa dicono di noi chi ha già scelto Edil Miccolis.
+            {t('testimonialsDescription')}
           </p>
         </div>
 
@@ -105,19 +104,19 @@ const TestimonialsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">100+</div>
-              <div className="text-sm text-muted-foreground">Progetti completati</div>
+              <div className="text-sm text-muted-foreground">{t('statsProjects')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">Anni di esperienza</div>
+              <div className="text-sm text-muted-foreground">{t('statsExperience')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Clienti soddisfatti</div>
+              <div className="text-sm text-muted-foreground">{t('statsSatisfaction')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24h</div>
-              <div className="text-sm text-muted-foreground">Risposta preventivi</div>
+              <div className="text-3xl font-bold text-primary mb-2">24{t('statsResponseUnit')}</div>
+              <div className="text-sm text-muted-foreground">{t('statsResponse')}</div>
             </div>
           </div>
         </div>

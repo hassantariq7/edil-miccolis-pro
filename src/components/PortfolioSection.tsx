@@ -11,11 +11,11 @@ const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'Tutti i progetti' },
-    { id: 'bathroom', name: 'Bagni' },
-    { id: 'kitchen', name: 'Cucine' },
-    { id: 'living', name: 'Soggiorni' },
-    { id: 'exterior', name: 'Esterni' },
+    { id: 'all', name: t('portfolioAll') },
+    { id: 'bathroom', name: t('portfolioBathroom') },
+    { id: 'kitchen', name: t('portfolioKitchen') },
+    { id: 'living', name: t('portfolioLiving') },
+    { id: 'exterior', name: t('portfolioExterior') },
   ];
 
   const projects = [
@@ -127,14 +127,14 @@ const PortfolioSection = () => {
                 
                 {project.beforeAfter && (
                   <Badge className="absolute top-4 left-4 bg-secondary text-secondary-foreground">
-                    Prima / Dopo
+                    {t('portfolioBeforeAfter')}
                   </Badge>
                 )}
                 
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button variant="outline" size="sm" className="bg-background/90 backdrop-blur-sm">
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Vedi dettagli
+                    {t('portfolioViewDetails')}
                   </Button>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const PortfolioSection = () => {
                     <div className="w-2 h-2 bg-primary rounded-full" />
                     {project.duration}
                   </span>
-                  <span>{project.client}</span>
+                  <span>{t('portfolioClient')}: {project.client}</span>
                 </div>
               </CardContent>
             </Card>
@@ -172,10 +172,10 @@ const PortfolioSection = () => {
         <div className="text-center mt-16">
           <div className="bg-hero-gradient rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Vuoi vedere il tuo progetto qui?
+              {t('portfolioCtaTitle')}
             </h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Ogni progetto inizia con un'idea. Raccontaci la tua e trasformiamola in realtà insieme.
+              {t('portfolioCtaDescription')}
             </p>
             <Button 
               variant="outline" 
@@ -188,7 +188,7 @@ const PortfolioSection = () => {
                 }
               }}
             >
-              Inizia il tuo progetto
+              {t('portfolioCtaButton')}
             </Button>
           </div>
         </div>

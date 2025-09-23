@@ -14,28 +14,28 @@ const ServicesSection = () => {
       title: t('paintingTitle'),
       description: t('paintingDescription'),
       image: paintingService,
-      features: ['Pitture per interni', 'Pitture per esterni', 'Finiture decorative', 'Consulenza colori'],
+      features: [t('paintingFeature1'), t('paintingFeature2'), t('paintingFeature3')],
     },
     {
       icon: Wallpaper,
       title: t('wallpaperTitle'),
       description: t('wallpaperDescription'),
       image: '/api/placeholder/400/300',
-      features: ['Carta da parati moderna', 'Decorazioni personalizzate', 'Rivestimenti tessili', 'Effetti speciali'],
+      features: [t('wallpaperFeature1'), t('wallpaperFeature2'), t('wallpaperFeature3')],
     },
     {
       icon: Hammer,
       title: t('drywallTitle'),
       description: t('drywallDescription'),
       image: drywallCeiling,
-      features: ['Pareti in cartongesso', 'Controsoffitti LED', 'Isolamento acustico', 'Design moderno'],
+      features: [t('drywallFeature1'), t('drywallFeature2'), t('drywallFeature3')],
     },
     {
       icon: Home,
       title: t('renovationTitle'),
       description: t('renovationDescription'),
       image: '/api/placeholder/400/300',
-      features: ['Ristrutturazione bagni', 'Ristrutturazione cucine', 'Lavori chiavi in mano', 'Progettazione completa'],
+      features: [t('renovationFeature1'), t('renovationFeature2'), t('renovationFeature3')],
     },
   ];
 
@@ -55,8 +55,7 @@ const ServicesSection = () => {
             {t('servicesTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Offriamo una gamma completa di servizi per ristrutturazione e finitura, 
-            con materiali di alta qualità e attenzione ai dettagli.
+            {t('servicesDescription')}
           </p>
         </div>
 
@@ -104,7 +103,7 @@ const ServicesSection = () => {
                     className="w-full group/btn"
                     onClick={scrollToContact}
                   >
-                    Richiedi preventivo per questo servizio
+                    {t('requestQuoteButton')}
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
                 </CardContent>
@@ -117,14 +116,13 @@ const ServicesSection = () => {
         <div className="text-center">
           <div className="bg-card-gradient rounded-2xl p-8 shadow-elegant">
             <h3 className="text-2xl font-bold font-heading text-foreground mb-4">
-              Cerchi un servizio personalizzato?
+              {t('servicesCta')}
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Ogni progetto è unico. Contattaci per discutere delle tue esigenze specifiche 
-              e ricevere una consulenza personalizzata.
+              {t('servicesCtaDescription')}
             </p>
             <Button variant="cta" size="lg" onClick={scrollToContact}>
-              Consulenza gratuita
+              {t('servicesCtaButton')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

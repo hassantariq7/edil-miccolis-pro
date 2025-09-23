@@ -35,14 +35,14 @@ const HeroSection = () => {
                 <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-muted-foreground font-medium">Oltre 100 clienti soddisfatti</span>
+            <span className="text-muted-foreground font-medium">{t('heroRating')}</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-foreground mb-6 leading-tight">
             {t('heroTitle')}
             <span className="block bg-hero-gradient bg-clip-text text-transparent">
-              in Italia
+              {t('heroLocation')}
             </span>
           </h1>
 
@@ -55,19 +55,19 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full"></div>
-              <span className="text-foreground font-medium">Preventivi gratuiti</span>
+              <span className="text-foreground font-medium">{t('heroFeature1')}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full"></div>
-              <span className="text-foreground font-medium">Materiali di qualità</span>
+              <span className="text-foreground font-medium">{t('heroFeature2')}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full"></div>
-              <span className="text-foreground font-medium">Consegna puntuale</span>
+              <span className="text-foreground font-medium">{t('heroFeature3')}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full"></div>
-              <span className="text-foreground font-medium">15+ anni esperienza</span>
+              <span className="text-foreground font-medium">{t('heroFeature4')}</span>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ const HeroSection = () => {
               }}
               className="text-lg px-8 py-6 h-auto border-2"
             >
-              Guarda i nostri lavori
+              {t('heroSecondaryButton')}
             </Button>
           </div>
         </div>
@@ -105,7 +105,7 @@ const HeroSection = () => {
         <div className="bg-card/80 backdrop-blur-sm rounded-lg p-4 shadow-hover">
           <div className="text-center">
             <div className="text-2xl font-bold text-primary">15+</div>
-            <div className="text-sm text-muted-foreground">Anni di esperienza</div>
+            <div className="text-sm text-muted-foreground">{t('heroFloatingTitle')}</div>
           </div>
         </div>
       </div>
