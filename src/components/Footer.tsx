@@ -18,10 +18,10 @@ const Footer = () => {
   ];
 
   const services = [
-    'Pitturazioni interne ed esterne',
-    'Carta da parati',
-    'Cartongesso e controsoffitti',
-    'Ristrutturazioni complete',
+    t('interiorExteriorPainting'),
+    t('wallpaperService'),
+    t('drywallCeilings'),
+    t('completeRenovations'),
   ];
 
   const scrollToSection = (href: string) => {
@@ -51,8 +51,7 @@ const Footer = () => {
               Edil Miccolis
             </h3>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Oltre 15 anni di esperienza in ristrutturazioni e finiture di qualità. 
-              Trasformiamo i tuoi spazi con professionalità e materiali premium.
+              {t('companyDescription')}
             </p>
             
             {/* Contact Info */}
@@ -78,7 +77,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-background mb-4">Link Rapidi</h4>
+            <h4 className="font-semibold text-background mb-4">{t('quickLinks')}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -95,7 +94,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-background mb-4">I Nostri Servizi</h4>
+            <h4 className="font-semibold text-background mb-4">{t('ourServices')}</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index} className="text-background/80">
@@ -107,7 +106,7 @@ const Footer = () => {
 
           {/* Social & CTA */}
           <div>
-            <h4 className="font-semibold text-background mb-4">Seguici</h4>
+            <h4 className="font-semibold text-background mb-4">{t('followUs')}</h4>
             <div className="flex gap-4 mb-6">
               <a href="#" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
                 <Facebook className="h-5 w-5 text-background" />
@@ -121,9 +120,9 @@ const Footer = () => {
             </div>
             
             <div className="bg-background/10 rounded-lg p-4">
-              <h5 className="font-medium text-background mb-2">Preventivo Gratuito</h5>
+              <h5 className="font-medium text-background mb-2">{t('freeQuote')}</h5>
               <p className="text-background/80 text-sm mb-3">
-                Richiedi una consulenza senza impegno
+                {t('consultationText')}
               </p>
               <Button
                 variant="secondary"
@@ -131,7 +130,7 @@ const Footer = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="w-full"
               >
-                Contattaci
+                {t('contactUs')}
               </Button>
             </div>
           </div>
@@ -141,17 +140,17 @@ const Footer = () => {
         <div className="border-t border-background/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-background/60 text-sm">
-              © 2024 Edil Miccolis. Tutti i diritti riservati.
+              {t('copyright')}
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-background/60 hover:text-background transition-colors">
-                Privacy Policy
+                {t('privacyPolicy')}
               </a>
               <a href="#" className="text-background/60 hover:text-background transition-colors">
-                Termini di Servizio
+                {t('termsOfService')}
               </a>
               <a href="#" className="text-background/60 hover:text-background transition-colors">
-                Cookie Policy
+                {t('cookiePolicy')}
               </a>
             </div>
           </div>

@@ -138,6 +138,25 @@ const translations = {
     formSubmitting: 'Invio in corso...',
     formSuccess: 'Richiesta inviata con successo! Ti contatteremo presto.',
     
+    // Footer
+    companyDescription: 'Oltre 15 anni di esperienza in ristrutturazioni e finiture di qualità. Trasformiamo i tuoi spazi con professionalità e materiali premium.',
+    quickLinks: 'Link Rapidi',
+    ourServices: 'I Nostri Servizi',
+    followUs: 'Seguici',
+    freeQuote: 'Preventivo Gratuito',
+    consultationText: 'Richiedi una consulenza senza impegno',
+    contactUs: 'Contattaci',
+    copyright: '© 2024 Edil Miccolis. Tutti i diritti riservati.',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Termini di Servizio',
+    cookiePolicy: 'Cookie Policy',
+    
+    // Footer Services
+    interiorExteriorPainting: 'Pitturazioni interne ed esterne',
+    wallpaperService: 'Carta da parati',
+    drywallCeilings: 'Cartongesso e controsoffitti',
+    completeRenovations: 'Ristrutturazioni complete',
+    
     // CTA
     ctaTitle: 'Hai un progetto in mente?',
     ctaButton: 'Contattaci ora',
@@ -268,6 +287,25 @@ const translations = {
     formSubmit: 'Send Request',
     formSubmitting: 'Sending...',
     formSuccess: 'Request sent successfully! We will contact you soon.',
+    
+    // Footer
+    companyDescription: 'Over 15 years of experience in renovations and quality finishes. We transform your spaces with professionalism and premium materials.',
+    quickLinks: 'Quick Links',
+    ourServices: 'Our Services',
+    followUs: 'Follow Us',
+    freeQuote: 'Free Quote',
+    consultationText: 'Request a consultation without obligation',
+    contactUs: 'Contact Us',
+    copyright: '© 2024 Edil Miccolis. All rights reserved.',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    cookiePolicy: 'Cookie Policy',
+    
+    // Footer Services
+    interiorExteriorPainting: 'Interior and exterior painting',
+    wallpaperService: 'Wallpaper',
+    drywallCeilings: 'Drywall and suspended ceilings',
+    completeRenovations: 'Complete renovations',
     
     // CTA
     ctaTitle: 'Got a project in mind?',
