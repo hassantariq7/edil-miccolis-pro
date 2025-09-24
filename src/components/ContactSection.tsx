@@ -18,7 +18,7 @@ const ContactSection = () => {
       icon: Phone,
       title: t('phone'),
       value: t('contactPhone'),
-      description: 'Lun-Ven 8:00-18:00, Sab 8:00-13:00',
+      description: t('contactHours'),
       link: 'tel:+39123456789',
     },
     {
@@ -32,14 +32,14 @@ const ContactSection = () => {
       icon: Mail,
       title: t('email'),
       value: t('contactEmail'),
-      description: 'Risposta entro 2 ore',
+      description: t('contactResponseFast'),
       link: 'mailto:info@edilmiccolis.it',
     },
     {
       icon: MapPin,
       title: t('address'),
       value: t('contactAddress'),
-      description: 'Servizio in tutta la Lombardia',
+      description: t('contactServiceArea'),
       link: 'https://maps.google.com',
     },
   ];
@@ -53,7 +53,7 @@ const ContactSection = () => {
     
     toast({
       title: t('formSuccess'),
-      description: "Ti ricontatteremo entro 24 ore per discutere il tuo progetto.",
+      description: t('formSuccessFollowup'),
     });
     
     setIsSubmitting(false);
@@ -83,7 +83,7 @@ const ContactSection = () => {
                 </p>
                 <div className="flex items-center gap-2 text-white/80">
                   <Clock className="h-4 w-4" />
-                  <span className="text-sm">Sopralluogo gratuito</span>
+                  <span className="text-sm">{t('contactFreeInspection')}</span>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-2xl font-heading">{t('contactButton')}</CardTitle>
                 <CardDescription>
-                  Compila il form con i dettagli del tuo progetto e ti ricontatteremo al più presto.
+                  {t('contactFormIntro')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -165,12 +165,12 @@ const ContactSection = () => {
                         id="service" 
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
-                        <option value="">Seleziona un servizio</option>
+                        <option value="">{t('selectServicePlaceholder')}</option>
                         <option value="painting">{t('formServicePainting')}</option>
                         <option value="wallpaper">{t('formServiceWallpaper')}</option>
                         <option value="drywall">{t('formServiceDrywall')}</option>
                         <option value="renovation">{t('formServiceRenovation')}</option>
-                        <option value="other">Altro</option>
+                        <option value="other">{t('optionOther')}</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -179,12 +179,12 @@ const ContactSection = () => {
                         id="budget" 
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
-                        <option value="">Seleziona budget</option>
+                        <option value="">{t('selectBudgetPlaceholder')}</option>
                         <option value="under-5k">{t('formBudget1')}</option>
                         <option value="5k-15k">{t('formBudget2')}</option>
                         <option value="15k-30k">{t('formBudget3')}</option>
                         <option value="over-30k">{t('formBudget4')}</option>
-                        <option value="discuss">Da discutere</option>
+                        <option value="discuss">{t('optionDiscuss')}</option>
                       </select>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ const ContactSection = () => {
                   <div className="flex items-center gap-2">
                     <input type="checkbox" id="privacy" required className="rounded" />
                     <Label htmlFor="privacy" className="text-sm text-muted-foreground">
-                      Accetto il trattamento dei dati personali secondo la privacy policy *
+                      {t('privacyConsent')} *
                     </Label>
                   </div>
 

@@ -160,6 +160,19 @@ const translations = {
     // CTA
     ctaTitle: 'Hai un progetto in mente?',
     ctaButton: 'Contattaci ora',
+    
+    // Contact details and form
+    contactHours: "Lun–Ven 8:00–18:00, Sab 8:00–13:00",
+    contactResponseFast: "Risposta entro 2 ore",
+    contactServiceArea: "Servizio in tutta la Lombardia",
+    contactFreeInspection: "Sopralluogo gratuito",
+    contactFormIntro: "Compila il form con i dettagli del tuo progetto e ti ricontatteremo al più presto.",
+    selectServicePlaceholder: "Seleziona un servizio",
+    optionOther: "Altro",
+    selectBudgetPlaceholder: "Seleziona budget",
+    optionDiscuss: "Da discutere",
+    privacyConsent: "Accetto il trattamento dei dati personali secondo la privacy policy",
+    formSuccessFollowup: "Ti ricontatteremo entro 24 ore per discutere il tuo progetto.",
   },
   en: {
     // Navigation
@@ -310,6 +323,19 @@ const translations = {
     // CTA
     ctaTitle: 'Got a project in mind?',
     ctaButton: 'Contact us now',
+    
+    // Contact details and form
+    contactHours: "Mon–Fri 8:00–18:00, Sat 8:00–13:00",
+    contactResponseFast: "Response within 2 hours",
+    contactServiceArea: "Service across Lombardy",
+    contactFreeInspection: "Free inspection",
+    contactFormIntro: "Fill out the form with your project details and we will get back to you shortly.",
+    selectServicePlaceholder: "Select a service",
+    optionOther: "Other",
+    selectBudgetPlaceholder: "Select budget",
+    optionDiscuss: "To discuss",
+    privacyConsent: "I consent to the processing of personal data according to the privacy policy",
+    formSuccessFollowup: "We will contact you within 24 hours to discuss your project.",
   },
 };
 
