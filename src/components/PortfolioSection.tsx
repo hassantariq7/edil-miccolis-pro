@@ -24,167 +24,186 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'Ristrutturazione Bagno Moderno',
+      titleKey: 'project1Title',
       category: 'bathroom',
-      description: 'Trasformazione completa con rivestimenti in ceramica, sanitari sospesi e illuminazione LED.',
+      descriptionKey: 'project1Description',
       image: bathroomBeforeAfter,
       beforeAfter: true,
       beforeImage: '/api/placeholder/600/400?text=Bagno+Prima',
       afterImage: bathroomBeforeAfter,
       additionalImages: ['/api/placeholder/600/400?text=Dettaglio+1', '/api/placeholder/600/400?text=Dettaglio+2'],
-      duration: '2 settimane',
-      client: 'Famiglia Rossi',
-      tags: ['Bagno', 'Ceramica', 'LED'],
-      completionDate: 'Marzo 2024',
-      projectSize: '8 mq',
-      fullDescription: 'Completa ristrutturazione di un bagno padronale con sostituzione di tutti gli impianti, nuovi rivestimenti in ceramica effetto marmo, sanitari sospesi di design e sistema di illuminazione LED con controllo dimmerabile. Aggiunta di nicchie funzionali e mobile su misura.',
-      challenges: [
-        'Spazio limitato da ottimizzare',
-        'Rifacimento completo degli impianti idraulici ed elettrici',
-        'Coordinamento con altri lavori in casa'
+      durationKey: 'duration2Weeks',
+      clientKey: 'clientPrivateFamily',
+      tagKeys: ['tagBathroom', 'tagCeramic', 'tagLED'],
+      completionDateKey: 'completionMarch2024',
+      projectSizeKey: 'projectSize8sqm',
+      fullDescriptionKey: 'project1FullDescription',
+      challengeKeys: [
+        'challenge1_1',
+        'challenge1_2',
+        'challenge1_3'
       ],
-      solutions: [
-        'Progettazione 3D per massimizzare lo spazio',
-        'Utilizzo di sanitari sospesi per guadagnare spazio',
-        'Illuminazione LED strategica per amplificare la percezione dello spazio'
+      solutionKeys: [
+        'solution1_1',
+        'solution1_2',
+        'solution1_3'
       ]
     },
     {
       id: 2,
-      title: 'Cucina Open Space',
+      titleKey: 'project2Title',
       category: 'kitchen',
-      description: 'Creazione di uno spazio aperto cucina-soggiorno con isola centrale e finiture moderne.',
+      descriptionKey: 'project2Description',
       image: '/api/placeholder/600/400',
       beforeAfter: true,
       beforeImage: '/api/placeholder/600/400?text=Cucina+Prima',
       afterImage: '/api/placeholder/600/400?text=Cucina+Dopo',
       additionalImages: ['/api/placeholder/600/400?text=Isola', '/api/placeholder/600/400?text=Dettagli'],
-      duration: '3 settimane',
-      client: 'Famiglia Bianchi',
-      tags: ['Cucina', 'Open Space', 'Isola'],
-      completionDate: 'Febbraio 2024',
-      projectSize: '25 mq',
-      fullDescription: 'Demolizione di una parete divisoria per creare un grande open space cucina-soggiorno. Installazione di cucina moderna con isola centrale, piano in quarzo e elettrodomestici ad incasso. Nuova illuminazione con faretti LED e lampade a sospensione.',
-      challenges: [
-        'Demolizione parete portante',
-        'Integrazione impianti nella nuova configurazione',
-        'Coordinamento estetico cucina-soggiorno'
+      durationKey: 'duration3Weeks',
+      clientKey: 'clientPrivateFamily2',
+      tagKeys: ['tagKitchen', 'tagOpenSpace', 'tagIsland'],
+      completionDateKey: 'completionFebruary2024',
+      projectSizeKey: 'projectSize25sqm',
+      fullDescriptionKey: 'project2FullDescription',
+      challengeKeys: [
+        'challenge2_1',
+        'challenge2_2',
+        'challenge2_3'
       ],
-      solutions: [
-        'Rinforzo strutturale con trave in acciaio',
-        'Progettazione integrata degli impianti',
-        'Scelta di materiali e colori coordinati'
+      solutionKeys: [
+        'solution2_1',
+        'solution2_2',
+        'solution2_3'
       ]
     },
     {
       id: 3,
-      title: 'Soggiorno Elegante',
+      titleKey: 'project3Title',
       category: 'living',
-      description: 'Ristrutturazione completa con controsoffitto illuminato e carta da parati di design.',
+      descriptionKey: 'project3Description',
       image: '/api/placeholder/600/400',
       beforeAfter: false,
       additionalImages: ['/api/placeholder/600/400?text=Vista+1', '/api/placeholder/600/400?text=Vista+2'],
-      duration: '10 giorni',
-      client: 'Studio Legale',
-      tags: ['Soggiorno', 'Controsoffitto', 'Design'],
-      completionDate: 'Gennaio 2024',
-      projectSize: '30 mq',
-      fullDescription: 'Rinnovamento completo di un soggiorno professionale con controsoffitto in cartongesso, illuminazione LED perimetrale, carta da parati di design sulla parete principale e pavimentazione in gres effetto legno.',
-      challenges: [
-        'Mantenere l\'operatività dello studio durante i lavori',
-        'Integrazione tecnologica avanzata',
-        'Rispetto dei tempi serrati'
+      durationKey: 'duration10Days',
+      clientKey: 'clientLawFirm',
+      tagKeys: ['tagLivingRoom', 'tagFalseCeiling', 'tagDesign'],
+      completionDateKey: 'completionJanuary2024',
+      projectSizeKey: 'projectSize30sqm',
+      fullDescriptionKey: 'project3FullDescription',
+      challengeKeys: [
+        'challenge3_1',
+        'challenge3_2',
+        'challenge3_3'
       ],
-      solutions: [
-        'Lavori programmati nei weekend',
-        'Predisposizione canalizzazioni per tecnologia',
-        'Team dedicato per rispettare le scadenze'
+      solutionKeys: [
+        'solution3_1',
+        'solution3_2',
+        'solution3_3'
       ]
     },
     {
       id: 4,
-      title: 'Facciata Esterna',
+      titleKey: 'project4Title',
       category: 'exterior',
-      description: 'Ripristino e pittura facciata esterna con materiali resistenti alle intemperie.',
+      descriptionKey: 'project4Description',
       image: '/api/placeholder/600/400',
       beforeAfter: true,
       beforeImage: '/api/placeholder/600/400?text=Facciata+Prima',
       afterImage: '/api/placeholder/600/400?text=Facciata+Dopo',
-      duration: '1 settimana',
-      client: 'Condominio Centro',
-      tags: ['Esterno', 'Pittura', 'Facciata'],
-      completionDate: 'Aprile 2024',
-      projectSize: '200 mq',
-      fullDescription: 'Completo rifacimento della facciata esterna di un palazzo condominiale con pulizia, stucco, primer anticorrosivo e due mani di pittura silossanica resistente alle intemperie.',
-      challenges: [
-        'Lavori in altezza su palazzo storico',
-        'Condizioni meteorologiche variabili',
-        'Coordinamento con i condomini'
+      durationKey: 'duration1Week',
+      clientKey: 'clientCondominium',
+      tagKeys: ['tagExterior', 'tagPainting', 'tagFacade'],
+      completionDateKey: 'completionApril2024',
+      projectSizeKey: 'projectSize200sqm',
+      fullDescriptionKey: 'project4FullDescription',
+      challengeKeys: [
+        'challenge4_1',
+        'challenge4_2',
+        'challenge4_3'
       ],
-      solutions: [
-        'Utilizzo di ponteggi certificati e personale specializzato',
-        'Programmazione lavori in base alle previsioni meteo',
-        'Comunicazione costante con l\'amministratore'
+      solutionKeys: [
+        'solution4_1',
+        'solution4_2',
+        'solution4_3'
       ]
     },
     {
       id: 5,
-      title: 'Bagno di Lusso',
+      titleKey: 'project5Title',
       category: 'bathroom',
-      description: 'Bagno principale con vasca freestanding, doccia walk-in e finiture premium.',
+      descriptionKey: 'project5Description',
       image: '/api/placeholder/600/400',
       beforeAfter: true,
       beforeImage: '/api/placeholder/600/400?text=Bagno+Lusso+Prima',
       afterImage: '/api/placeholder/600/400?text=Bagno+Lusso+Dopo',
       additionalImages: ['/api/placeholder/600/400?text=Vasca', '/api/placeholder/600/400?text=Doccia'],
-      duration: '4 settimane',
-      client: 'Villa Privata',
-      tags: ['Lusso', 'Vasca', 'Premium'],
-      completionDate: 'Maggio 2024',
-      projectSize: '15 mq',
-      fullDescription: 'Bagno padronale di lusso con vasca freestanding, doccia walk-in con soffione a cascata, rivestimenti in marmo naturale, riscaldamento a pavimento e sistema domotico per controllo luci e temperatura.',
-      challenges: [
-        'Installazione impianti complessi',
-        'Lavorazione marmo naturale',
-        'Integrazione sistema domotico'
+      durationKey: 'duration4Weeks',
+      clientKey: 'clientPrivateVilla',
+      tagKeys: ['tagLuxury', 'tagBathtub', 'tagPremium'],
+      completionDateKey: 'completionMay2024',
+      projectSizeKey: 'projectSize15sqm',
+      fullDescriptionKey: 'project5FullDescription',
+      challengeKeys: [
+        'challenge5_1',
+        'challenge5_2',
+        'challenge5_3'
       ],
-      solutions: [
-        'Collaborazione con specialisti di settore',
-        'Taglio e posa in opera del marmo su misura',
-        'Programmazione sistema domotico personalizzato'
+      solutionKeys: [
+        'solution5_1',
+        'solution5_2',
+        'solution5_3'
       ]
     },
     {
       id: 6,
-      title: 'Cucina Classica',
+      titleKey: 'project6Title',
       category: 'kitchen',
-      description: 'Ristrutturazione cucina in stile classico con legno massello e marmo.',
+      descriptionKey: 'project6Description',
       image: '/api/placeholder/600/400',
       beforeAfter: true,
       beforeImage: '/api/placeholder/600/400?text=Cucina+Classica+Prima',
       afterImage: '/api/placeholder/600/400?text=Cucina+Classica+Dopo',
-      duration: '3 settimane',
-      client: 'Casa di Campagna',
-      tags: ['Classico', 'Legno', 'Marmo'],
-      completionDate: 'Giugno 2024',
-      projectSize: '20 mq',
-      fullDescription: 'Cucina in stile classico toscano con mobili in legno massello di castagno, top in marmo Carrara, cappa in muratura rivestita a mano e pavimento in cotto antico recuperato.',
-      challenges: [
-        'Reperimento materiali antichi originali',
-        'Lavorazioni artigianali tradizionali',
-        'Rispetto dello stile della casa'
+      durationKey: 'duration3Weeks',
+      clientKey: 'clientCountryHouse',
+      tagKeys: ['tagClassic', 'tagWood', 'tagMarble'],
+      completionDateKey: 'completionJune2024',
+      projectSizeKey: 'projectSize20sqm',
+      fullDescriptionKey: 'project6FullDescription',
+      challengeKeys: [
+        'challenge6_1',
+        'challenge6_2',
+        'challenge6_3'
       ],
-      solutions: [
-        'Ricerca presso fornitori specializzati',
-        'Coinvolgimento di maestranze esperte',
-        'Studio approfondito dello stile architettonico esistente'
+      solutionKeys: [
+        'solution6_1',
+        'solution6_2',
+        'solution6_3'
       ]
     },
   ];
 
+  // Transform projects with translated content
+  const getTranslatedProjects = () => {
+    return projects.map(project => ({
+      ...project,
+      title: t(project.titleKey),
+      description: t(project.descriptionKey),
+      duration: t(project.durationKey),
+      client: t(project.clientKey),
+      tags: project.tagKeys.map(tagKey => t(tagKey)),
+      completionDate: t(project.completionDateKey),
+      projectSize: t(project.projectSizeKey),
+      fullDescription: t(project.fullDescriptionKey),
+      challenges: project.challengeKeys?.map(challengeKey => t(challengeKey)) || [],
+      solutions: project.solutionKeys?.map(solutionKey => t(solutionKey)) || []
+    }));
+  };
+
+  const translatedProjects = getTranslatedProjects();
+
   const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+    ? translatedProjects 
+    : translatedProjects.filter(project => project.category === activeCategory);
 
   const handleViewDetails = (project) => {
     setSelectedProject(project);
