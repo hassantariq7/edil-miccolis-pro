@@ -173,6 +173,20 @@ const translations = {
     optionDiscuss: "Da discutere",
     privacyConsent: "Accetto il trattamento dei dati personali secondo la privacy policy",
     formSuccessFollowup: "Ti ricontatteremo entro 24 ore per discutere il tuo progetto.",
+    
+    // Project Detail Modal
+    projectDetailBefore: "Prima",
+    projectDetailAfter: "Dopo",
+    projectDetailView: "Vista",
+    projectDetailSwipeInstruction: "Scorri per vedere le foto prima/dopo",
+    projectDetailDescription: "Descrizione del Progetto",
+    projectDetailDuration: "Durata",
+    projectDetailClient: "Cliente",
+    projectDetailCompleted: "Completato",
+    projectDetailSize: "Dimensioni",
+    projectDetailChallenges: "Sfide del Progetto",
+    projectDetailSolutions: "Soluzioni Adottate",
+    projectDetailContactCta: "Inizia un progetto simile",
   },
   en: {
     // Navigation
@@ -336,6 +350,20 @@ const translations = {
     optionDiscuss: "To discuss",
     privacyConsent: "I consent to the processing of personal data according to the privacy policy",
     formSuccessFollowup: "We will contact you within 24 hours to discuss your project.",
+    
+    // Project Detail Modal
+    projectDetailBefore: "Before",
+    projectDetailAfter: "After",
+    projectDetailView: "View",
+    projectDetailSwipeInstruction: "Swipe to see before/after photos",
+    projectDetailDescription: "Project Description",
+    projectDetailDuration: "Duration",
+    projectDetailClient: "Client",
+    projectDetailCompleted: "Completed",
+    projectDetailSize: "Size",
+    projectDetailChallenges: "Project Challenges",
+    projectDetailSolutions: "Solutions Implemented",
+    projectDetailContactCta: "Start a similar project",
   },
 };
 
