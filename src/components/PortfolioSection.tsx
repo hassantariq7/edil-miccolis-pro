@@ -1,11 +1,23 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ExternalLink } from 'lucide-react';
 import ProjectDetailModal from '@/components/ProjectDetailModal';
-import bathroomBeforeAfter from '@/assets/bathroom-before-after.jpg';
+import bathroomAfter from '@/assets/bathroom1-after.png';
+import bathroomBefore from '@/assets/bathroom1-before.png';
+import bathroomAfter2 from '@/assets/bathroom2-after.png';
+import bathroomBefore2 from '@/assets/bathroom2-before.png';
+import kitchenBefore1 from '@/assets/kitchen1-before.png';
+import kitchenAfter1 from '@/assets/kitchen1-after.png';
+import kitchenBefore2 from '@/assets/kitchen2-before.png';
+import kitchenAfter2 from '@/assets/kitchen2-after.png';
+import livingBefore1 from '@/assets/living1-before.png';
+import livingAfter1 from '@/assets/living1-after.png';
+import exteriorAfter from '@/assets/exterior-after.png';
+import exteriorBefore from '@/assets/exterior-before.png';
 
 const PortfolioSection = () => {
   const { t } = useLanguage();
@@ -27,10 +39,10 @@ const PortfolioSection = () => {
       titleKey: 'project1Title',
       category: 'bathroom',
       descriptionKey: 'project1Description',
-      image: bathroomBeforeAfter,
+      image: bathroomAfter,
       beforeAfter: true,
-      beforeImage: '/api/placeholder/600/400?text=Bagno+Prima',
-      afterImage: bathroomBeforeAfter,
+      beforeImage: bathroomBefore,
+      afterImage: bathroomAfter,
       additionalImages: ['/api/placeholder/600/400?text=Dettaglio+1', '/api/placeholder/600/400?text=Dettaglio+2'],
       durationKey: 'duration2Weeks',
       clientKey: 'clientPrivateFamily',
@@ -54,10 +66,10 @@ const PortfolioSection = () => {
       titleKey: 'project2Title',
       category: 'kitchen',
       descriptionKey: 'project2Description',
-      image: '/api/placeholder/600/400',
+      image: kitchenAfter1,
       beforeAfter: true,
-      beforeImage: '/api/placeholder/600/400?text=Cucina+Prima',
-      afterImage: '/api/placeholder/600/400?text=Cucina+Dopo',
+      beforeImage: kitchenBefore1,
+      afterImage: kitchenAfter1,
       additionalImages: ['/api/placeholder/600/400?text=Isola', '/api/placeholder/600/400?text=Dettagli'],
       durationKey: 'duration3Weeks',
       clientKey: 'clientPrivateFamily2',
@@ -81,8 +93,10 @@ const PortfolioSection = () => {
       titleKey: 'project3Title',
       category: 'living',
       descriptionKey: 'project3Description',
-      image: '/api/placeholder/600/400',
-      beforeAfter: false,
+      image: livingAfter1,
+      beforeAfter: true,
+      afterImage: livingAfter1,
+      beforeImage: livingBefore1,
       additionalImages: ['/api/placeholder/600/400?text=Vista+1', '/api/placeholder/600/400?text=Vista+2'],
       durationKey: 'duration10Days',
       clientKey: 'clientLawFirm',
@@ -106,10 +120,10 @@ const PortfolioSection = () => {
       titleKey: 'project4Title',
       category: 'exterior',
       descriptionKey: 'project4Description',
-      image: '/api/placeholder/600/400',
+      image: exteriorAfter,
       beforeAfter: true,
-      beforeImage: '/api/placeholder/600/400?text=Facciata+Prima',
-      afterImage: '/api/placeholder/600/400?text=Facciata+Dopo',
+      beforeImage: exteriorBefore,
+      afterImage: exteriorAfter,
       durationKey: 'duration1Week',
       clientKey: 'clientCondominium',
       tagKeys: ['tagExterior', 'tagPainting', 'tagFacade'],
@@ -132,10 +146,10 @@ const PortfolioSection = () => {
       titleKey: 'project5Title',
       category: 'bathroom',
       descriptionKey: 'project5Description',
-      image: '/api/placeholder/600/400',
+      image: bathroomAfter2,
       beforeAfter: true,
-      beforeImage: '/api/placeholder/600/400?text=Bagno+Lusso+Prima',
-      afterImage: '/api/placeholder/600/400?text=Bagno+Lusso+Dopo',
+      beforeImage: bathroomBefore2,
+      afterImage: bathroomAfter2,
       additionalImages: ['/api/placeholder/600/400?text=Vasca', '/api/placeholder/600/400?text=Doccia'],
       durationKey: 'duration4Weeks',
       clientKey: 'clientPrivateVilla',
@@ -159,10 +173,10 @@ const PortfolioSection = () => {
       titleKey: 'project6Title',
       category: 'kitchen',
       descriptionKey: 'project6Description',
-      image: '/api/placeholder/600/400',
+      image: kitchenAfter2,
       beforeAfter: true,
-      beforeImage: '/api/placeholder/600/400?text=Cucina+Classica+Prima',
-      afterImage: '/api/placeholder/600/400?text=Cucina+Classica+Dopo',
+      beforeImage: kitchenBefore2,
+      afterImage: kitchenAfter2,
       durationKey: 'duration3Weeks',
       clientKey: 'clientCountryHouse',
       tagKeys: ['tagClassic', 'tagWood', 'tagMarble'],
@@ -201,8 +215,8 @@ const PortfolioSection = () => {
 
   const translatedProjects = getTranslatedProjects();
 
-  const filteredProjects = activeCategory === 'all' 
-    ? translatedProjects 
+  const filteredProjects = activeCategory === 'all'
+    ? translatedProjects
     : translatedProjects.filter(project => project.category === activeCategory);
 
   const handleViewDetails = (project) => {
@@ -242,23 +256,29 @@ const PortfolioSection = () => {
           {filteredProjects.map((project) => (
             <Card key={project.id} className="overflow-hidden shadow-elegant hover:shadow-hover transition-all duration-300 group cursor-pointer">
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+                {project.beforeAfter ? (
+                  <BeforeAfterSlider beforeImage={project.beforeImage} afterImage={project.afterImage} />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500"
+                  />
+                )}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+
                 {project.beforeAfter && (
                   <Badge className="absolute top-4 left-4 bg-secondary text-secondary-foreground">
                     {t('portfolioBeforeAfter')}
                   </Badge>
                 )}
-                
+
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
+                  <Button
+                    variant="outline"
+                    size="sm"
                     className="bg-background/90 backdrop-blur-sm"
                     onClick={() => handleViewDetails(project)}
                   >
@@ -267,7 +287,7 @@ const PortfolioSection = () => {
                   </Button>
                 </div>
               </div>
-              
+
               <CardContent className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tags.map((tag, tagIndex) => (
@@ -276,15 +296,15 @@ const PortfolioSection = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <h3 className="text-xl font-semibold font-heading text-foreground mb-2">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="flex justify-between items-center text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-primary rounded-full" />
@@ -306,8 +326,8 @@ const PortfolioSection = () => {
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
               {t('portfolioCtaDescription')}
             </p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="bg-white text-primary hover:bg-white/90 border-white"
               onClick={() => {
