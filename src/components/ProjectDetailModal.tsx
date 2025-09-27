@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Calendar, Clock, User, X } from 'lucide-react';
+import { Calendar, Clock, User } from 'lucide-react';
+import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 
 interface ProjectDetailModalProps {
   project: {
@@ -35,25 +35,20 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
 
   if (!project) return null;
 
-  // Prepare images array for carousel
+  // Build images for carousel (excluding before/after — handled separately now)
   const getProjectImages = () => {
-    const images = [];
-    
-    if (project.beforeAfter && project.beforeImage && project.afterImage) {
-      images.push(
-        { src: project.beforeImage, label: t('projectDetailBefore'), type: 'before' },
-        { src: project.afterImage, label: t('projectDetailAfter'), type: 'after' }
-      );
-    } else {
+    const images: { src: string; label: string; type: string }[] = [];
+
+    if (!project.beforeAfter) {
       images.push({ src: project.image, label: project.title, type: 'main' });
     }
-    
+
     if (project.additionalImages) {
       project.additionalImages.forEach((img, index) => {
         images.push({ src: img, label: `${t('projectDetailView')} ${index + 1}`, type: 'additional' });
       });
     }
-    
+
     return images;
   };
 
@@ -69,44 +64,49 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
         </DialogHeader>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Image Carousel */}
+          {/* Image Section */}
           <div className="space-y-4">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {images.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative">
-                      <img
-                        src={image.src}
-                        alt={image.label}
-                        className="w-full h-80 object-cover rounded-lg"
-                      />
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <Badge 
-                          variant={image.type === 'before' ? 'destructive' : image.type === 'after' ? 'default' : 'secondary'}
-                          className="bg-background/90 backdrop-blur-sm text-foreground"
-                        >
-                          {image.label}
-                        </Badge>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {images.length > 1 && (
-                <>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </>
-              )}
-            </Carousel>
-            
-            {project.beforeAfter && (
-              <div className="text-center">
-                <p className="text-sm text-muted-foreground">
+            {project.beforeAfter && project.beforeImage && project.afterImage ? (
+              <div className="w-full h-80">
+                <BeforeAfterSlider
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  className="h-full"
+                />
+                <p className="text-sm text-muted-foreground text-center mt-2">
                   {t('projectDetailSwipeInstruction')}
                 </p>
               </div>
+            ) : (
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {images.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative">
+                        <img
+                          src={image.src}
+                          alt={image.label}
+                          className="w-full h-80 object-cover rounded-lg"
+                        />
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <Badge
+                            variant={image.type === 'main' ? 'default' : 'secondary'}
+                            className="bg-background/90 backdrop-blur-sm text-foreground"
+                          >
+                            {image.label}
+                          </Badge>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                {images.length > 1 && (
+                  <>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </>
+                )}
+              </Carousel>
             )}
           </div>
 
@@ -138,7 +138,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
                   <p className="text-sm text-muted-foreground">{project.duration}</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <User className="h-5 w-5 text-primary" />
                 <div>
@@ -146,7 +146,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
                   <p className="text-sm text-muted-foreground">{project.client}</p>
                 </div>
               </div>
-              
+
               {project.completionDate && (
                 <div className="flex items-center gap-3">
                   <Calendar className="h-5 w-5 text-primary" />
@@ -156,7 +156,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
                   </div>
                 </div>
               )}
-              
+
               {project.projectSize && (
                 <div className="flex items-center gap-3">
                   <div className="h-5 w-5 bg-primary rounded-full flex-shrink-0" />
@@ -199,7 +199,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: ProjectDetailModalProp
 
             {/* CTA Button */}
             <div className="pt-4 border-t border-border">
-              <Button 
+              <Button
                 className="w-full"
                 onClick={() => {
                   onClose();
