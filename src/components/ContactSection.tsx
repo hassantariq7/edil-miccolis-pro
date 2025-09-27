@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -12,6 +13,7 @@ const ContactSection = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const contactInfo = [
     {
@@ -47,16 +49,33 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: t('formSuccess'),
-      description: t('formSuccessFollowup'),
-    });
-    
-    setIsSubmitting(false);
+
+    if (!formRef.current) return;
+
+    try {
+      await emailjs.sendForm(
+        'service_xv5gmhm',    
+        'template_ri32o2v', 
+        formRef.current,
+        'dymcuHYclbziMgrvj'    
+      );
+
+      toast({
+        title: t('formSuccess'),
+        description: t('formSuccessFollowup'),
+      });
+
+      formRef.current.reset(); // clear form after submission
+    } catch (error) {
+      toast({
+        title: t('formError'),
+        description: t('formErrorTryAgain'),
+        variant: 'destructive',
+      });
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,12 +143,13 @@ const ContactSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">{t('formName')} *</Label>
                       <Input 
                         id="name" 
+                        name="user_name"
                         required 
                         placeholder={t('formNamePlaceholder')}
                         className="transition-all duration-300 focus:shadow-elegant"
@@ -139,6 +159,7 @@ const ContactSection = () => {
                       <Label htmlFor="phone">{t('formPhone')} *</Label>
                       <Input 
                         id="phone" 
+                        name="user_phone"
                         type="tel" 
                         required 
                         placeholder={t('formPhonePlaceholder')}
@@ -151,6 +172,7 @@ const ContactSection = () => {
                     <Label htmlFor="email">{t('formEmail')} *</Label>
                     <Input 
                       id="email" 
+                      name="user_email"
                       type="email" 
                       required 
                       placeholder={t('formEmailPlaceholder')}
@@ -163,6 +185,7 @@ const ContactSection = () => {
                       <Label htmlFor="service">{t('formService')}</Label>
                       <select 
                         id="service" 
+                        name="service"
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
                         <option value="">{t('selectServicePlaceholder')}</option>
@@ -177,6 +200,7 @@ const ContactSection = () => {
                       <Label htmlFor="budget">{t('formBudget')}</Label>
                       <select 
                         id="budget" 
+                        name="budget"
                         className="w-full px-3 py-2 border border-input rounded-md bg-background transition-all duration-300 focus:shadow-elegant focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       >
                         <option value="">{t('selectBudgetPlaceholder')}</option>
@@ -193,6 +217,7 @@ const ContactSection = () => {
                     <Label htmlFor="message">{t('formDescription')} *</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       required 
                       placeholder={t('formDescriptionPlaceholder')}
                       rows={4}
