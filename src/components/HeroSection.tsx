@@ -80,7 +80,7 @@ const HeroSection = () => {
   // Auto-rotation effect
   useEffect(() => {
     if (!isPaused) {
-      const interval = setInterval(nextSlide, 5000);
+      const interval = setInterval(nextSlide, 2000);
       return () => clearInterval(interval);
     }
   }, [isPaused]);
@@ -110,7 +110,7 @@ const HeroSection = () => {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/50 to-background/50" />
       </div>
 
       {/* Navigation Controls */}
