@@ -20,18 +20,51 @@ const translations = {
     testimonials: 'Testimonianze',
     contact: 'Contatti',
     
-    // Hero Section
-    heroTitle: 'Ristrutturazioni e Finiture di Qualità',
-    heroSubtitle: 'Trasformiamo i tuoi spazi con pitture, carta da parati, cartongesso e ristrutturazioni complete',
-    heroButton: 'Richiedi un preventivo gratuito',
-    heroRating: 'Oltre 100 clienti soddisfatti',
-    heroLocation: 'in Italia',
-    heroFeature1: 'Preventivi gratuiti',
-    heroFeature2: 'Materiali di qualità',
-    heroFeature3: 'Consegna puntuale',
-    heroFeature4: '15+ anni esperienza',
-    heroSecondaryButton: 'Guarda i nostri lavori',
-    heroFloatingTitle: 'Anni di esperienza',
+    // Hero Section - General
+    heroRating: 'Votato #1 a Roma',
+    heroButton: 'Preventivo Gratuito',
+    heroSecondaryButton: 'Vedi i Nostri Lavori',
+    heroFloatingTitle: 'Anni di Esperienza',
+
+    // Hero Slide 1 - General Renovations
+    hero1Title: 'Ristrutturazioni Premium a',
+    hero1Location: 'Roma e Lazio',
+    hero1Subtitle: 'Trasforma il tuo spazio con i nostri servizi di ristrutturazione esperti. Dalle cucine alle ristrutturazioni complete, garantiamo qualità eccezionale e maestria artigianale.',
+    hero1Feature1: '20+ Anni di Esperienza',
+    hero1Feature2: 'Autorizzati e Assicurati',
+    hero1Feature3: 'Garanzia di Qualità',
+    hero1Feature4: 'Consulenze Gratuite',
+    hero1Cta: 'Preventivo Gratuito',
+
+    // Hero Slide 2 - Bathroom Renovations
+    hero2Title: 'Ristrutturazioni Bagno',
+    hero2Location: 'di Lusso',
+    hero2Subtitle: 'Crea il bagno dei tuoi sogni con sanitari moderni, finiture eleganti e maestria artigianale. Ristrutturazioni complete dalla progettazione all\'installazione.',
+    hero2Feature1: 'Design Moderni',
+    hero2Feature2: 'Sanitari Efficienti',
+    hero2Feature3: 'Materiali Premium',
+    hero2Feature4: 'Installazione Rapida',
+    hero2Cta: 'Trasforma il Tuo Bagno',
+
+    // Hero Slide 3 - Kitchen Renovations
+    hero3Title: 'Cucine Moderne',
+    hero3Location: 'su Misura',
+    hero3Subtitle: 'Progetta il cuore della tua casa con cucine personalizzate che uniscono funzionalità ed estetica. Dai mobili ai piani di lavoro.',
+    hero3Feature1: 'Mobili su Misura',
+    hero3Feature2: 'Piani di Lavoro Premium',
+    hero3Feature3: 'Elettrodomestici Moderni',
+    hero3Feature4: 'Ottimizzazione Spazi',
+    hero3Cta: 'Ridisegna la Tua Cucina',
+
+    // Hero Slide 4 - Painting Services
+    hero4Title: 'Servizi di',
+    hero4Location: 'Tinteggiatura',
+    hero4Subtitle: 'Rinnova i tuoi spazi con servizi di tinteggiatura professionale. Soluzioni interne ed esterne con vernici premium e tecniche esperte.',
+    hero4Feature1: 'Interni ed Esterni',
+    hero4Feature2: 'Vernici Premium',
+    hero4Feature3: 'Consulenza Colori',
+    hero4Feature4: 'Completamento Rapido',
+    hero4Cta: 'Preventivo Tinteggiatura',
     
     // About Section
     aboutTitle: 'Esperienza e Qualità',
@@ -312,18 +345,51 @@ const translations = {
     testimonials: 'Testimonials',
     contact: 'Contact',
     
-    // Hero Section
-    heroTitle: 'Quality Renovations & Finishes',
-    heroSubtitle: 'We transform your spaces with painting, wallpaper, drywall, and complete renovations',
-    heroButton: 'Request a free quote',
-    heroRating: 'Over 100 satisfied clients',
-    heroLocation: 'in Italy',
-    heroFeature1: 'Free quotes',
-    heroFeature2: 'Quality materials',
-    heroFeature3: 'On-time delivery',
-    heroFeature4: '15+ years experience',
-    heroSecondaryButton: 'View our work',
-    heroFloatingTitle: 'Years of experience',
+    // Hero Section - General
+    heroRating: 'Voted #1 in Rome',
+    heroButton: 'Get Free Quote',
+    heroSecondaryButton: 'View Our Work',
+    heroFloatingTitle: 'Years Experience',
+
+    // Hero Slide 1 - General Renovations
+    hero1Title: 'Premium Renovations in',
+    hero1Location: 'Rome & Lazio',
+    hero1Subtitle: 'Transform your space with our expert renovation services. From kitchens to complete home makeovers, we deliver exceptional quality and craftsmanship.',
+    hero1Feature1: '20+ Years Experience',
+    hero1Feature2: 'Licensed & Insured',
+    hero1Feature3: 'Quality Guarantee',
+    hero1Feature4: 'Free Consultations',
+    hero1Cta: 'Get Free Quote',
+
+    // Hero Slide 2 - Bathroom Renovations
+    hero2Title: 'Luxury Bathroom',
+    hero2Location: 'Renovations',
+    hero2Subtitle: 'Create your dream bathroom with modern fixtures, elegant finishes, and expert craftsmanship. Complete renovations from design to installation.',
+    hero2Feature1: 'Modern Designs',
+    hero2Feature2: 'Water-Efficient Fixtures',
+    hero2Feature3: 'Premium Materials',
+    hero2Feature4: 'Quick Installation',
+    hero2Cta: 'Transform Your Bathroom',
+
+    // Hero Slide 3 - Kitchen Renovations
+    hero3Title: 'Modern Kitchen',
+    hero3Location: 'Transformations',
+    hero3Subtitle: 'Design the heart of your home with custom kitchens that blend functionality with stunning aesthetics. From cabinets to countertops.',
+    hero3Feature1: 'Custom Cabinetry',
+    hero3Feature2: 'Premium Countertops',
+    hero3Feature3: 'Modern Appliances',
+    hero3Feature4: 'Space Optimization',
+    hero3Cta: 'Redesign Your Kitchen',
+
+    // Hero Slide 4 - Painting Services
+    hero4Title: 'Professional Painting',
+    hero4Location: 'Services',
+    hero4Subtitle: 'Refresh your space with professional painting services. Interior and exterior solutions with premium paints and expert techniques.',
+    hero4Feature1: 'Interior & Exterior',
+    hero4Feature2: 'Premium Paints',
+    hero4Feature3: 'Color Consultation',
+    hero4Feature4: 'Quick Completion',
+    hero4Cta: 'Get Painting Quote',
     
     // About Section
     aboutTitle: 'Experience and Quality',
