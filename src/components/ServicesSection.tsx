@@ -3,7 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Paintbrush, Wallpaper, Hammer, Home, ArrowRight } from 'lucide-react';
 import paintingService from '@/assets/painting-service.jpg';
+import wallpaperDecor from '@/assets/wallpaper-decor.png';
 import drywallCeiling from '@/assets/drywall-ceiling.jpg';
+import completeReno from '@/assets/complete-reno.png';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -20,7 +22,7 @@ const ServicesSection = () => {
       icon: Wallpaper,
       title: t('wallpaperTitle'),
       description: t('wallpaperDescription'),
-      image: '/api/placeholder/400/300',
+      image: wallpaperDecor,
       features: [t('wallpaperFeature1'), t('wallpaperFeature2'), t('wallpaperFeature3')],
     },
     {
@@ -34,7 +36,7 @@ const ServicesSection = () => {
       icon: Home,
       title: t('renovationTitle'),
       description: t('renovationDescription'),
-      image: '/api/placeholder/400/300',
+      image: completeReno,
       features: [t('renovationFeature1'), t('renovationFeature2'), t('renovationFeature3')],
     },
   ];
@@ -69,9 +71,9 @@ const ServicesSection = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/5 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2 bg-primary rounded-lg shadow-elegant">
