@@ -67,8 +67,13 @@ const translations = {
     hero4Cta: 'Preventivo Tinteggiatura',
     
     // About Section
-    aboutTitle: 'Esperienza e Qualità',
-    aboutDescription: 'Con oltre 15 anni di esperienza, Edil Miccolis offre lavori di ristrutturazione e finitura di interni ed esterni su misura. Professionalità, puntualità e materiali di alta qualità: il nostro impegno è dare nuova vita alla tua casa.',
+    aboutTitle: 'EDILMICCOLIS – L\'Arte di Ridare Vita agli Spazi',
+    aboutTagline: 'Tradizione, cura e emozione in ogni progetto. Edilmiccolis nasce da un\'idea semplice: dare nuova vita a ciò che ami, rendendo unico ogni tuo spazio.',
+    aboutParagraph1: 'Ogni progetto è un incontro tra materia e visione. Dove altri vedono vecchie pareti senza vita, noi vediamo possibilità da far rinascere. Ogni superficie può raccontare qualcosa, ogni ambiente può tornare a respirare.',
+    aboutParagraph2: 'Edilmiccolis nasce da un\'idea semplice: dietro ogni ristrutturazione c\'è una storia da riscrivere, un sogno da riportare alla luce, un dettaglio che può trasformare una casa qualunque nel tuo posto perfetto.',
+    aboutParagraph3: 'Non lavoriamo per costruire solo spazi belli — ma spazi autentici, che parlano di te, del tuo modo di vivere, della tua idea di comfort e bellezza. Ogni ristrutturazione è un atto di ascolto, un dialogo tra passato e futuro, tradizione e innovazione.',
+    aboutParagraph4: 'Crediamo nel valore del fatto a mano, nell\'arte di rendere ogni ambiente unico. Dal primo sopralluogo all\'ultimo tocco, accompagniamo i nostri clienti in un percorso di trasformazione che non riguarda solo le pareti, ma le emozioni che le abitano.',
+    aboutClosing: 'Costruiamo connessioni, atmosfere, ricordi. Perché la vera bellezza non è mai standard, ma nasce dal tempo, dalla cura e dal cuore di chi la realizza.',
     
     // Services
     servicesTitle: 'I Nostri Servizi',
@@ -392,8 +397,13 @@ const translations = {
     hero4Cta: 'Get Painting Quote',
     
     // About Section
-    aboutTitle: 'Experience and Quality',
-    aboutDescription: 'With over 15 years of experience, Edil Miccolis delivers tailor-made renovation and finishing services for interiors and exteriors. Professionalism, reliability, and premium materials: our mission is to give your home a new life.',
+    aboutTitle: 'EDILMICCOLIS – The Art of Bringing Spaces Back to Life',
+    aboutTagline: 'Tradition, care, and emotion in every project. Edilmiccolis was born from a simple idea: to give new life to what you love, making each of your spaces unique.',
+    aboutParagraph1: 'Every project is a meeting between matter and vision. Where others see lifeless old walls, we see possibilities to be reborn. Every surface can tell a story, every space can breathe again.',
+    aboutParagraph2: 'Edilmiccolis was born from a simple idea: behind every renovation, there\'s a story to rewrite, a dream to bring to light, a detail that can transform an ordinary house into your perfect place.',
+    aboutParagraph3: 'We don\'t work to build just beautiful spaces — but authentic spaces that speak of you, of your way of living, of your idea of comfort and beauty. Every renovation is an act of listening, a dialogue between past and future, tradition and innovation.',
+    aboutParagraph4: 'We believe in the value of handmade work, in the art of making each environment unique. From the first inspection to the final touch, we accompany our clients on a transformation journey that concerns not only walls, but the emotions that inhabit them.',
+    aboutClosing: 'We build connections, atmospheres, memories. Because true beauty is never standard, but comes from time, care, and the heart of those who create it.',
     
     // Services
     servicesTitle: 'Our Services',
