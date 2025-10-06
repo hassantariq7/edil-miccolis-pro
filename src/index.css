@@ -2,59 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Edil Miccolis Design System - Premium Construction & Renovation Colors */
+/* Edil Miccolis Design System - Luxury Minimal Monochrome */
 
 @layer base {
   :root {
-    /* Base colors - Clean neutrals */
-    --background: 0 0% 99%;
-    --foreground: 210 15% 15%;
+    /* Base colors - Linen & Stone Grey */
+    --background: 38 33% 94%;
+    --foreground: 0 0% 23%;
 
     /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 0 0% 23%;
 
     /* Popover system */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 0 0% 23%;
 
-    /* Primary - Sophisticated Blue */
-    --primary: 220 90% 35%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 220 90% 30%;
+    /* Primary - Taupe Accent */
+    --primary: 38 26% 63%;
+    --primary-foreground: 0 0% 23%;
+    --primary-hover: 38 26% 58%;
 
-    /* Secondary - Warm Terracotta */
-    --secondary: 15 80% 60%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 15 80% 55%;
+    /* Secondary - Stone Grey */
+    --secondary: 0 0% 23%;
+    --secondary-foreground: 38 33% 94%;
+    --secondary-hover: 0 0% 18%;
 
     /* Neutral system */
-    --muted: 210 15% 96%;
-    --muted-foreground: 210 10% 50%;
+    --muted: 38 23% 88%;
+    --muted-foreground: 0 0% 47%;
 
-    /* Accent - Light terracotta */
-    --accent: 15 25% 95%;
-    --accent-foreground: 210 15% 15%;
+    /* Accent - Taupe */
+    --accent: 38 26% 63%;
+    --accent-foreground: 0 0% 23%;
 
     /* Status colors */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     /* Form elements */
-    --border: 210 15% 88%;
-    --input: 210 15% 96%;
-    --ring: 220 90% 35%;
+    --border: 38 23% 88%;
+    --input: 38 23% 88%;
+    --ring: 38 26% 63%;
 
     /* Design tokens */
     --radius: 0.75rem;
 
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 35%) 0%, hsl(15 80% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
+    /* Custom gradients - Subtle monochrome */
+    --gradient-hero: linear-gradient(135deg, hsl(38 26% 63%) 0%, hsl(0 0% 23%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(38 33% 94%) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 25px -5px hsl(210 15% 15% / 0.08);
-    --shadow-hover: 0 20px 40px -10px hsl(210 15% 15% / 0.15);
+    /* Shadows - Soft and elegant */
+    --shadow-elegant: 0 10px 25px -5px hsl(0 0% 23% / 0.06);
+    --shadow-hover: 0 20px 40px -10px hsl(0 0% 23% / 0.12);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -75,35 +75,35 @@
   }
 
   .dark {
-    --background: 210 15% 8%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 8%;
+    --foreground: 38 33% 94%;
 
-    --card: 210 15% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 38 33% 94%;
 
-    --popover: 210 15% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 38 33% 94%;
 
-    --primary: 220 90% 45%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 220 90% 40%;
+    --primary: 38 26% 63%;
+    --primary-foreground: 0 0% 8%;
+    --primary-hover: 38 26% 68%;
 
-    --secondary: 15 80% 65%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 15 80% 60%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 8%;
+    --secondary-hover: 0 0% 85%;
 
-    --muted: 210 15% 15%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 15 25% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 38 26% 63%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 20%;
-    --input: 210 15% 15%;
-    --ring: 220 90% 45%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 38 26% 63%;
   }
 }
 
