@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X, Phone, Globe } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -30,11 +31,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold font-heading bg-hero-gradient bg-clip-text text-transparent">
-              Edil Miccolis
-            </h1>
+            <img src={logo} alt="Logo" className="h-5 w-auto mr-2" />
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
