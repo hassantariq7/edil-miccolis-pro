@@ -35,7 +35,7 @@ const ContactSection = () => {
       title: t('email'),
       value: t('contactEmail'),
       description: t('contactResponseFast'),
-      link: 'mailto:info@edilmiccolis.it',
+      link: 'mailto:miccolisvincenzo50@gmail.com',
     },
     {
       icon: MapPin,

@@ -59,13 +59,13 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-secondary" />
                 <a href="tel:+39123456789" className="text-background/80 hover:text-background transition-colors">
-                  +39 123 456 7890
+                  339 3321170
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-secondary" />
-                <a href="mailto:info@edilmiccolis.it" className="text-background/80 hover:text-background transition-colors">
-                  info@edilmiccolis.it
+                <a href="mailto:miccolisvincenzo50@gmail.com" className="text-background/80 hover:text-background transition-colors">
+                  miccolisvincenzo50@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
