@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+import { Phone, Mail, Building2, Clock, MessageCircle, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -38,11 +38,11 @@ const ContactSection = () => {
       link: 'mailto:miccolisvincenzo50@gmail.com',
     },
     {
-      icon: MapPin,
-      title: t('address'),
-      value: t('contactAddress'),
-      description: t('contactServiceArea'),
-      link: 'https://maps.google.com',
+      icon: Building2,
+      title: t('companyInfo'),
+      value: `${t('companyVAT')}: ${t('companyVATNumber')}`,
+      description: `${t('companyCode')}: ${t('companyCodeNumber')}`,
+      link: '#',
     },
   ];
 
