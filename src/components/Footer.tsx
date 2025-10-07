@@ -108,10 +108,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-background mb-4">{t('followUs')}</h4>
             <div className="flex gap-4 mb-6">
-              <a href="#" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
+              <a href="https://www.facebook.com/share/1EEXoRss3X/?mibextid=wwXIfr" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
                 <Facebook className="h-5 w-5 text-background" />
               </a>
-              <a href="#" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
+              <a href="https://www.instagram.com/edilmiccolis?igsh=cGk3M3g1ZnQ3YXJv" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
                 <Instagram className="h-5 w-5 text-background" />
               </a>
               <a href="#" className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors">
