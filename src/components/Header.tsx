@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className="h-5 w-auto mr-2" />
+            <img src={logo} alt="Logo" className="h-10 w-auto mr-2" />
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
