@@ -140,7 +140,7 @@ const HeroSection = () => {
                 <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-muted-foreground font-medium">{t('heroRating')}</span>
+            <span className="text-muted-foreground font-medium"></span>
           </div>
 
           {/* Main Heading */}
