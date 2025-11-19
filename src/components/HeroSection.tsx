@@ -146,7 +146,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-foreground mb-6 leading-tight transition-all duration-700">
             {t(currentHero.titleKey)}
-            <span className="block bg-hero-gradient bg-clip-text text-transparent">
+            <span className="block bg-hero-gradient bg-clip-text text-transparent py-4">
               {t(currentHero.locationKey)}
             </span>
           </h1>

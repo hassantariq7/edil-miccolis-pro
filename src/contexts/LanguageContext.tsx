@@ -362,7 +362,7 @@ const translations = {
 
     // Hero Slide 1 - General Renovations
     hero1Title: 'Premium Renovations in',
-    hero1Location: 'Noci & Lazio',
+    hero1Location: 'Puglia',
     hero1Subtitle: 'Transform your space with our expert renovation services. From kitchens to complete home makeovers, we deliver exceptional quality and craftsmanship.',
     hero1Feature1: '15+ Years Experience',
     hero1Feature2: 'Licensed & Insured',
