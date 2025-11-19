@@ -28,7 +28,7 @@ const translations = {
 
     // Hero Slide 1 - General Renovations
     hero1Title: 'Ristrutturazioni Premium a',
-    hero1Location: 'Noci e Lazio',
+    hero1Location: 'Puglia',
     hero1Subtitle: 'Trasforma il tuo spazio con i nostri servizi di ristrutturazione esperti. Dalle cucine alle ristrutturazioni complete, garantiamo qualità eccezionale e maestria artigianale.',
     hero1Feature1: '15+ Anni di Esperienza',
     hero1Feature2: 'Autorizzati e Assicurati',

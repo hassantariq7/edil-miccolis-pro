@@ -70,7 +70,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span className="text-background/80">Via Noci 123, Milano</span>
+                <span className="text-background/80">Noci, 70015, Bari</span>
               </div>
             </div>
           </div>
